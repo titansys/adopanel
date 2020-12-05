@@ -16,6 +16,7 @@ After that, run the following commands one by one.
 4. `sed -i -e 's/\r$//' adopanel.sh`
 5. `./adopanel.sh "admin_username" "admin_password" "unique_id"` - Change the admin_username to your AdoPiSoft admin username and the admin_password with your AdoPiSoft admin password. After that, change the unique_id with the id you want to use to access your ngrok url. For example, you used "testingpanel" then you will access your ngrok url with https://adopanel/testingpanel
 6. `sudo reboot` - Reboot your machine for everything to take effect. 
+7. After finishing reboot, you should be able to access your ngrok remote address by going to https://adopanel/unique_id
 
 # Notes
 
