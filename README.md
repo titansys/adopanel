@@ -1,7 +1,7 @@
 # AdoPanel
 
-	📡 AdoPanel is a free service for redirecting to your Ngrok URL generated on every boot by AdoPiSoft, this effectively removes the excess effort of logging in to your monitoring dashboard just to get the remote URLs.
-	
+📡 AdoPanel is a free service for redirecting to your Ngrok URL generated on every boot by AdoPiSoft, this effectively removes the excess effort of logging in to your monitoring dashboard just to get the remote URLs.
+
 ## ✨ Installation
 
 1. `wget "https://github.com/titansys/adopanel/releases/latest/download/release.zip" -O adopanel.zip`
