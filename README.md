@@ -20,5 +20,5 @@ After that, run the following commands one by one.
 # Notes
 
 - This guide assumes that you already added your ngrok auth token in the admin panel of your AdoPiSoft.
-- When your AdoPiSoft machine reboots, adopanel will wait for 120 seconds to make sure that AdoPiSoft system has already started so the ngrok remote url will already be available upon sending to adopanel server.
+- When your AdoPiSoft machine reboots, adopanel will wait for 2 minutes to make sure that AdoPiSoft system has already started so the ngrok remote url will already be available upon sending to adopanel server.
 - Only your ngrok's remote url is uploaded to the server, so rest assured that adopanel is safe to be used.
