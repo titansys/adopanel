@@ -3,11 +3,14 @@
 define("uname", $argv[1]);
 define("upass", $argv[2]);
 define("uid", $argv[3]);
+define("delay", !isset($argv[4]) ? 120 : $argv[4]);
+
+sleep(delay);
 
 // Login Admin
 
 $login = curl_init();
-curl_setopt($login, CURLOPT_URL,"http://192.168.254.117/login");
+curl_setopt($login, CURLOPT_URL,"http://localhost/login");
 curl_setopt($login, CURLOPT_POST, 1);
 curl_setopt($login, CURLOPT_POSTFIELDS, "username=". uname . "&password=" . upass);
 curl_setopt($login, CURLOPT_RETURNTRANSFER, true);
@@ -32,7 +35,7 @@ $token = str_replace("; Path=/", "", $headers["set-cookie"][0]);
 // Get Services
 
 $services = curl_init();
-curl_setopt($services, CURLOPT_URL,"http://192.168.254.117/settings/services");
+curl_setopt($services, CURLOPT_URL,"http://localhost/settings/services");
 curl_setopt($services, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($services, CURLOPT_HTTPHEADER, [
     "Accept: application/json, text/plain, */*",
@@ -46,7 +49,7 @@ curl_close($services);
 $ngrok = json_decode($response, TRUE)["ngrok_url"];
 
 $connect = curl_init();
-curl_setopt($connect, CURLOPT_URL,"localhost/adopanel/handler/connect");
+curl_setopt($connect, CURLOPT_URL,"https://adopanel.ml/connect");
 curl_setopt($connect, CURLOPT_POST, 1);
 curl_setopt($connect, CURLOPT_POSTFIELDS, "url={$ngrok}&unique=" . uid);
 curl_setopt($connect, CURLOPT_RETURNTRANSFER, true);
